@@ -17,13 +17,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        selectedImage= findViewById(R.id.imageView1);
+        selectedImage = null; // Initialize selectedImage to null
     }
 
     public void onImageClick(View view) {
-
         selectedImage = (ImageView) view;
-        Toast.makeText(this, "" + selectedImage.getContentDescription() + " selected", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, selectedImage.getContentDescription() + " selected", Toast.LENGTH_SHORT).show();
     }
 
     public void onShowImageClick(View view) {
